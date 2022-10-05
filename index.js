@@ -9,6 +9,31 @@ const questions = [
         type: 'text',
         message: 'What is the title of the project?',
         name: 'title'
+    },
+    {
+        type: 'text',
+        message: 'Write a description of the project',
+        name: 'description'
+    },
+    {
+        type: 'text',
+        message: 'Describe how to install the project',
+        name: 'installation'
+    },
+    {
+        type: 'text',
+        message: 'Describe how to use the project',
+        name: 'usage'
+    },
+    {
+        type: 'text',
+        message: 'Outline the contribution guidelines of the project',
+        name: 'contributing'
+    },
+    {
+        type: 'text',
+        message: 'Describe the tests for the project',
+        name: 'tests'
     }
 ];
 
