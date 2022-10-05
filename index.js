@@ -24,8 +24,10 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer
         .prompt(questions)
-        .then((res) => generateMarkdown(res))
-        .then((res) => writeToFile(res.title, res))
+        .then((res) => {
+            var markdownContent = generateMarkdown(res);
+            writeToFile(res.title, markdownContent);
+        })
 };
 
 // Function call to initialize app
