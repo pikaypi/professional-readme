@@ -15,7 +15,7 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
 
-    fs.writeFile(fileName, data, (err) =>
+    fs.writeFile(`./public/${fileName}.md`, data, (err) =>
     err ? console.log(err) : console.log(`Successfully created ${fileName}!`)
   );
 }
@@ -25,7 +25,7 @@ function init() {
     inquirer
         .prompt(questions)
         .then((res) => generateMarkdown(res))
-        .then((res) => writeToFile('README.md', res))
+        .then((res) => writeToFile(res.title, res))
 };
 
 // Function call to initialize app
