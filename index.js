@@ -34,6 +34,12 @@ const questions = [
         type: 'text',
         message: 'Describe the tests for the project',
         name: 'tests'
+    },
+    {
+        type: 'list',
+        message: 'Which GitHub license does the project have?',
+        name: 'license',
+        choices: ['MIT License', 'Apache 2.0', 'ISC License', 'BSD 3-Clause', 'BSD 2-Clause', 'Creative Commons Zero', 'GNU GPL v3']
     }
 ];
 
