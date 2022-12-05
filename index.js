@@ -1,9 +1,12 @@
-// TODO: Include packages needed for this application
+// Import the dependencies required for the application
+// Inquirer will allow the application to prompt the user for information
+// File System allows the application to create the new markdown file
+// generateMarkdown is the file that holds the template for the markdown and the logic to add the user's responses
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+// This is the array of questions that the user will be asked.
 const questions = [
     {
         type: 'text',
@@ -35,6 +38,7 @@ const questions = [
         message: 'Describe the tests for the project',
         name: 'tests'
     },
+    // This prompt will ask the user to choose from a list instead of typing a response
     {
         type: 'list',
         message: 'Which GitHub license does the project have?',
@@ -48,7 +52,7 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
+// This function takes the content from the user responses and creates the file with an approprite filename
 function writeToFile(fileName, data) {
 
     fs.writeFile(`./public/${fileName}.md`, data, (err) =>
@@ -56,12 +60,12 @@ function writeToFile(fileName, data) {
   );
 }
 
-// TODO: Create a function to initialize app
+// This function tells the application to promt the user for responses then generate the markdown file.
 function init() {
     inquirer
         .prompt(questions)
         .then((res) => writeToFile(res.title, generateMarkdown(res)))
 };
 
-// Function call to initialize app
+// This is the code that calls the application to run when the user initializes it
 init();

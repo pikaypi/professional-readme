@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// This function takes the user's response about licences and generates a corresponding badge. If there is no licecse, an empty string is returned in place of a badge.
 function renderLicenseBadge(license) {
   switch (license) {
     case 'MIT License':
@@ -31,15 +30,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
+// This function fills the user's data into the readme template and returns a string containing the formatted content of the markdown file
 function generateMarkdown(data) {
   return `# ${data.title}
 
@@ -79,4 +70,5 @@ ${renderLicenseBadge(data.license)}
 `;
 }
 
+// This line exports the functions in this file to be used in the index.js file
 module.exports = generateMarkdown;
