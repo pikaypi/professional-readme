@@ -28,6 +28,8 @@ npm run start
 ```
 and follow the prompts in the terminal as shown in the video below.
 
+[Click here to watch a video demonstrating the functionality of the Professional Readme Generator](https://drive.google.com/file/d/1CZ8JoVNkCzEledX_H4IMjXW4STW3Lcp2/view)
+
 ---
 ## Contributing
 I don't understand this section. Would love some enlightenment in my assignment comments.
