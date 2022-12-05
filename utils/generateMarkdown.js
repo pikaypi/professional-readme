@@ -49,6 +49,7 @@ function generateMarkdown(data) {
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Test](#tests)
+- [Questions](#questions)
 
 ---
 ## Description
@@ -69,6 +70,10 @@ ${data.contributing}
 ---
 ## Tests
 ${data.tests}
+
+---
+## Questions
+[https://github.com/${data.github}](https://github.com/${data.github})
 
 ${renderLicenseBadge(data.license)}
 `;
